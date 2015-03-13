@@ -3,25 +3,36 @@
 <%= form_for @user, url: signup_path do |f|  %>
 
 <div class = "form-group">
-<%= f.label :first_name %>
-<%= f.text_field :first_name %>
+  <div class= "col-sm-8">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: "form-control" %>
+  </div>
 </div>
 
 <div class = "form-group">
-<%= f.label :last_name %>
-<%= f.text_field :last_name %>
+  <div class= "col-sm-8">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
 </div>
 
 <div class = "form-group">
-<%= f.label :email %>
-<%= f.email_field :email %>
+  <div class= "col-sm-8">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control" %>
+  </div>
 </div>
-
 
 <div class = "form-group">
-<%= f.label :password %>
-<%= f.password_field :password %>
+  <div class= "col-sm-8">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control" %>
+<br>
+  </div>
 </div>
-
-<%= f.submit "Sign Up" %>
-<% end %>
+<div class = "form-group">
+  <div class= "col-sm-8">
+  <%= f.submit "Sign Up", class: "btn btn-primary" %>
+  <% end %>
+</div>
+</div>
