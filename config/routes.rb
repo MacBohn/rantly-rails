@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/sign-up' => 'registrations#new', as: :signup
   post '/sign-up' => 'registrations#create'
   delete '/sign-out' => 'registrations#destroy', as: :signout
+  get '/sign-in' => 'authentication#new', as: :signin
+  post '/sign-in' => 'authentication#create'
 
 
   resources :users
