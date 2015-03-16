@@ -45,7 +45,6 @@ feature "Users" do
               fill_in "Email", with: "Mac@Bohn.com"
               fill_in "Password", with: "password"
               click_on "Log In"
-              save_and_open_page
               expect(page).to have_content("Mac")
               end
             end
