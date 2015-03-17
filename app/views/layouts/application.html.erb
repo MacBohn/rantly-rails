@@ -11,28 +11,32 @@
   <div class="header">
     <div class="navbar navbar-default" role="navigation">
       <div class="container">
+        <div class="navbar-brand"><%=link_to "Rantly", root_path%></div>
         <div class="navbar-header">
-          <a class="navbar-brand"><%=link_to "Rantly", root_path%></a>
           <%= link_to "Rants", root_path %>
           <%= link_to "Users", users_path %>
-          <%= link_to "Sign Up", signup_path %>
+          <%= link_to "Sign In", signin_path %>
           <% if current_user %>
           <%= link_to "Sign Out", signout_path, method: :delete %>
-          <%= current_user.first_name %>
+          <%= current_user.full_name %>
           <% end %>
         </div>
       </div>
-    </div>
-          <%= form_tag("/search", method: "get") do %>
-          <%= label_tag(:q, "Search for:") %>
-          <%= text_field_tag(:q, nil, :placeholder => "Search") %>
-          <%= submit_tag("Search") %>
-          <% end %>
-  </div>
-<%= notice %>
-  <div class="container">
-    <%= yield %>
-  </div>
 
-</body>
-</html>
+  <div class = "search">
+    <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q, nil, :placeholder => "Search") %>
+    <%= submit_tag("Search") %>
+    <% end %>
+    <%= notice %>
+    <%= link_to "New Rant", new_rant_path, class: "pull-right" %>
+    </div>
+  </div>
+  </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  </body>
+  </html>

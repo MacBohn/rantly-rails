@@ -29,7 +29,7 @@ feature "Users" do
           expect(page).to_not have_content("Mac")
           end
 
-          scenario "Users can signin" do
+          scenario "Users can sign in and sign out" do
             visit '/sign-up'
             fill_in "First name", with: "Mac"
             fill_in "Last name", with: "Bohn"

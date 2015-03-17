@@ -15,6 +15,8 @@ feature "Users" do
     visit root_path
     click_on "Users"
     expect(page).to have_content("John Jones")
+    expect(page).to have_content("Mac Bohn")
+
 end
 
   end
