@@ -1,1 +1,7 @@
 <h1>Hello World !</h1>
+<% @rants.each do |rant| %>
+<%= rant.title %>
+<%= rant.body %>
+<%= rant.user_id %>
+<%= link_to "Edit", edit_rant_path(@rant)%>
+<% end %>
