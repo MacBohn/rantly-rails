@@ -13,6 +13,6 @@
 
  <%= f.label :body %>
  <%= f.text_field :body %>
- <%= link_to "Delete", rant_path(@rant), method: :delete %>
+ <%= link_to "Delete", rant_path(@rant), method: :delete, class: "btn btn-danger" %>
  <%= f.submit "Save" %>
  <% end %>
