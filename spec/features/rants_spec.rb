@@ -116,5 +116,23 @@ feature 'Rants' do
         expect(page).to_not have_content("Edit")
 
       end
+      scenario "Users can't edit a rant" do
+        visit '/sign-up'
+        fill_in "First name", with: "Mac"
+        fill_in "Last name", with: "Bohn"
+        fill_in "Email", with: "Mac@Bohn.com"
+        fill_in "Password", with: "password"
+        within("#new_user") do
+          click_on "Sign Up"
+        end
+
+        click_on "New Rant"
+        fill_in "Title", with: ""
+        fill_in "Body", with: ("This is the body" * 10)
+        click_on "Save"
+        expect(page).to have_content("Title can't be blank")
+
+      end
+
 
 end
