@@ -2,7 +2,7 @@
 <% @rants.each do |rant| %>
 <%= rant.title %>
 <%= rant.body %>
-<% if current_user %>
+<% if current_user && current_user.id == rant.user_id %>
 <%= link_to "Edit", edit_rant_path(rant), class: "Edit" %>
 <% end %>
 <% end %>
