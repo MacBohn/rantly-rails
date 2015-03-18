@@ -9,7 +9,8 @@ class RantsController < ApplicationController
   end
 
   def create
-    @rant = Rant.new(params.require(:rant).permit(:title, :body, :user_id))
+    @rant = Rant.new(rant_params)
+      @rant.user_id = current_user.id
     if @rant.save
       redirect_to root_path
     else
@@ -24,11 +25,23 @@ class RantsController < ApplicationController
 
   def update
     @rant = Rant.find(params[:id])
-    if @rant.update(params.require(:rant).permit(:title, :body, :user_id))
+    if @rant.update(rant_params)
       redirect_to root_path
     else
       render :edit
     end
+  end
+
+  def destroy
+    @rant = Rant.find(params[:id])
+    @rant.destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def rant_params
+    params.require(:rant).permit(:title, :body, :user_id)
   end
 
 end
