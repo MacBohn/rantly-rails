@@ -1,5 +1,5 @@
 <h1>Hello World !</h1>
-<% @rants.each do |rant| %>
+<% @rants.reverse_each do |rant| %>
 <%= rant.title %>
 <%= rant.body %>
 <% if current_user && current_user.id == rant.user_id %>
