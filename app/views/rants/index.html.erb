@@ -3,5 +3,5 @@
 <%= rant.title %>
 <%= rant.body %>
 <%= rant.user_id %>
-<%= link_to "Edit", edit_rant_path(@rant)%>
+<%= link_to "Edit", edit_rant_path(rant), class: "Edit" %>
 <% end %>
