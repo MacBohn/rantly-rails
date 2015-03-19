@@ -1,8 +1,12 @@
-<h1>Hello World !</h1>
+<h1>RANTS</h1>
+<% if %>
 <% @rants.reverse_each do |rant| %>
-<%= rant.title %>
-<%= rant.body %>
-<% if current_user && current_user.id == rant.user_id %>
-<%= link_to "Edit", edit_rant_path(rant), class: "Edit" %>
-<% end %>
-<% end %>
+  <%= rant.title %>
+  <%= rant.body %>
+  <% if current_user && current_user.id == rant.user_id %>
+    <%= link_to "Edit", edit_rant_path(rant), class: "Edit" %>
+  <% end %>
+  <% end %>
+<% else %>
+<h2> <%= notice %> </h2>
+  <% end %>

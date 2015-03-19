@@ -26,20 +26,22 @@ body {
 
 .search{
   background: #3498DB;
+  padding: 7px 15px;
+  color: #fff;
+  line-height: 23px;
 }
 
 
 
-a:hover{
-  color: white;
-  border-bottom: 2px solid transparent;
-}
+
 
 a:-webkit-any-link {
   font-color: white;
   text-decoration: none;
   cursor: auto;
 }
+
+
 
 
 
@@ -52,11 +54,9 @@ a:-webkit-any-link {
 }
 
 .btn-invert{
-background: white;
-height: 27px;
-margin-right: 10px;
-padding-bottom: 20px;
-color: #1ABC9C;
+  background: #fff;
+  color: #1ABC9C;
+  border-color: #fff;
 }
 
 
