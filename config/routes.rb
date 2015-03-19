@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   delete '/sign-out' => 'registrations#destroy', as: :signout
   get '/sign-in' => 'authentication#new', as: :signin
   post '/sign-in' => 'authentication#create'
+  get '/search' => 'rants#search'
+  post '/search' => 'rants#search'
 
 
   resources :users

@@ -1,4 +1,9 @@
 class RantsController < ApplicationController
+  def search
+    @rants = Rant.where(title: params[:search]) || Rant.where(body: params[:search])
+    render :search_results
+  end
+
 
   def index
     @rants = Rant.all
@@ -30,6 +35,10 @@ class RantsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
+    @rant = Rant.find(params[:id])
   end
 
   def destroy

@@ -1,0 +1,5 @@
+<ul>
+   <% @rants.each do |rant| %>
+ <li><%= link_to rant.title, :action => 'show', :id => rant.id  %></li>
+ <% end %>
+ </ul>
