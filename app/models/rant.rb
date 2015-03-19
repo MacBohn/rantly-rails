@@ -9,7 +9,7 @@ class Rant < ActiveRecord::Base
 
 
 def self.search(search)
-    search_condition = "%" + search + "%"
+  where("body LIKE ? or title LIKE ?", "%#{search}%", "%#{search}%") 
 end
 
 

@@ -20,22 +20,26 @@
           <%= link_to "Sign Out", signout_path, method: :delete %>
           <%= current_user.full_name %>
           <% end %>
-        </div>
+          </div>
+
+          </div>
+
+      <div class = "search">
+          <%= form_tag search_path, class:"search", :method => 'get' do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search", class: "search" %>
+          <!-- <%= submit_tag "Search", :name => nil, class: "btn btn-warning" %> -->
+          <% end %>
       </div>
 
-  <div class = "search">
-    <%= render :partial => 'rants/search' %>
-    </div>
 
+            <%= notice %>
+            </div>
+            </div>
 
-    <%= notice %>
-  </div>
-  </div>
+            <%=  %>
+            <div class="container">
+              <%= yield %>
+              </div>
 
-  <%=  %>
-    <div class="container">
-      <%= yield %>
-    </div>
-
-  </body>
-  </html>
+              </body>
+              </html>

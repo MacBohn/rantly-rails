@@ -1,12 +1,7 @@
 class RantsController < ApplicationController
-  def search
-    @rants = Rant.where(title: params[:search]) || Rant.where(body: params[:search])
-    render :search_results
-  end
-
 
   def index
-    @rants = Rant.all
+    @rants = Rant.search(params[:search])
   end
 
   def new
