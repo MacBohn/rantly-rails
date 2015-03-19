@@ -11,7 +11,6 @@ feature "Users" do
     within("#new_user") do
       click_on "Sign Up"
       end
-      expect(page).to have_content("Thanks for signing up")
       expect(page).to have_content("Mac")
       end
 

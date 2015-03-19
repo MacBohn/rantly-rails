@@ -134,5 +134,28 @@ feature 'Rants' do
 
       end
 
+    #   scenario "Users will see flash message if the search does not exist" do
+    #   visit '/sign-up'
+    #   fill_in "First name", with: "Mac"
+    #   fill_in "Last name", with: "Bohn"
+    #   fill_in "Email", with: "Mac@Bohn.com"
+    #   fill_in "Password", with: "password"
+    #   within("#new_user") do
+    #     click_on "Sign Up"
+    #   end
+    #
+    #   click_on "New Rant"
+    #   fill_in "Title", with: "THIS IS THE TITLE"
+    #   fill_in "Body", with: ("This is the body" * 10)
+    #   click_on "Save"
+    #   save_and_open_page
+    #
+    #   fill_in "Search", with: "00000"
+    #
+    #
+    #   expect(page).to have_content("These aren't the droids you're looking for !")
+    #
+    # end
+
 
 end

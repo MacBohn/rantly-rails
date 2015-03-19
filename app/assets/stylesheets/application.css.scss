@@ -1,77 +1,189 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900);
+@import "colors";
+@import "buttons";
+@import "user_tiles";
+@import "user_form";
+@import "fonts";
 
-
-body {
-  margin: 0px;
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+html{
+  font-family: 'Laila', serif;
+  font-family: 'Hind', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $navBlue;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
+body{
+  margin: 0;
+  height: 100%;
+}
 
-.navbar-header{
-  width: 400px;
-  font-size: 20px;
-  margin-top: 10px;
+.container{
+  padding: 0 0 0 15px;
+  width: 100%;
+  height: 100%;
 }
-.navbar-default{
-  background: #34495e;
+
+.rcontainer{
+  margin-left: -15px;
+  padding: 15px;
+  width: 73.4%;
+  min-width: 100px;
+  float: left;
+  height: 100%;
 }
-.navbar-brand{
-  font-size: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
+
+.navbar, .header{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  color: white;
+  padding: 6px 15px 4px 10px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.navbar{
+  font-size: 32px;
+  background: $navBlue;
+}
+
+.navbar a{
+  color: white;
+  font-size: 32px;
+  background: $navBlue;
+  text-decoration: none;
+}
+
+.navbar span a{
+  font-size: 16px;
+  padding-left: 20px;
+  vertical-align: 25%;
+  color: white;
+  text-decoration: none;
+}
+
+.header{
+  font-size: 24px;
+  background: $headerBlue;
+}
+
+.profile-pic, .avatar{
+  height: 100px;
+  background: url("http://www.gravatar.com/avatar/undefined?s=450") center/cover no-repeat;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border: 5px dashed $navBlue;
+}
+
+.avatar{
+  clear: both;
+  float: left;
+  display: inline-block;
+  width: 20%;
+  margin-right: 20px;
+}
+
+.rant-head{
+  float: left;
+  width: 100%;
+  padding-bottom: 20px;
+  a{
+  text-decoration: none;
+  }
+}
+
+.rant-head h2{
+  a{
+  color:$navBlue;
+  }
+}
+
+.rant-post{
+  width: 100%;
+  padding-top: 150px;
+  clear: both;
+  display: inline;
+}
+
+.text-area{
+  float: left;
+  width: 77%;
+  min-height: 100px;
+  outline: none;
+  resize: none;
+  border: none;
+/*   # # # # need js to adjust height per needs # # # #
+ */}
+
+.profile-box{
+  float: left;
+  width: 25%;
+  border-right: 1px solid $borderGrey;
+  box-shadow: -1px 2px 1px 1px rgba(225,225,225,0.6);
+  margin-right: 20px;
+}
+
+.rant-box{
+  font-family: 'Hind', sans-serif;
+  display: inline;
+  float: right;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid $borderGrey;
+  margin: 0 0 15px 0;
+  border-radius: 4px;
+  box-shadow: -1px 1px 1px 1px rgba(225,225,225,0.6);
+  overflow: hidden;
+}
+
+.rant-box h2{
+  font-family: 'Laila', sans-serif;
   font-weight: 700;
+  font-size: 30px;
+  display: inline;
+}
+
+.wide{
+  float: left;
+  max-width: 600px;
+  min-width: 200px;
+  display: inline;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $borderGrey;
+  margin-bottom: 20px;
+}
+
+.wide:hover {
+  transition: 0.25s;
+  border-bottom: 2px solid $buttonGreen;
+/* you'll need javascript to keep border bottom styled after mousing away */
+}
+
+.scroll{
+  background: 3px solid red;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
 }
 
 .search{
-  background: #3498DB;
-  padding: 7px 15px;
-  color: #fff;
-  line-height: 23px;
+  font-family: 'Helvetica''Arial', sans-serif;
+  border: none;
+  outline: none;
+  background: $headerBlue;
+  color: $navBlue;
+  width: 300px;
+  display: inline;
 }
 
-
-
-
-
-a:-webkit-any-link {
-  font-color: white;
-  text-decoration: none;
-  cursor: auto;
+.search::-webkit-input-placeholder {
+   color: white;
 }
 
-
-
-
-
-.Edit{
-  color: black;
+.inline{
+  display: inline;
 }
-
-.Edit:hover{
-  color: black;
-}
-
-.btn-invert{
-  background: #fff;
-  color: #1ABC9C;
-  border-color: #fff;
-}
-
-
-/*
-* This is a manifest file that'll be compiled into application.css, which will include all the files
-* listed below.
-*
-* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
-* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
-*
-* You're free to add application-wide styles to this file and they'll appear at the bottom of the
-* compiled file so the styles you add here take precedence over styles defined in any styles
-* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
-* file per style scope.
-*
-*= require_tree .
-*= require_self
-*/
