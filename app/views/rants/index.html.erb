@@ -1,12 +1,31 @@
 <h1>RANTS</h1>
-<% if %>
+
+<div class="scroll">
+<% if @rants.count > 0 %>
 <% @rants.reverse_each do |rant| %>
-  <%= rant.title %>
-  <%= rant.body %>
-  <% if current_user && current_user.id == rant.user_id %>
-    <%= link_to "Edit", edit_rant_path(rant), class: "Edit" %>
-  <% end %>
-  <% end %>
-<% else %>
-<h2> <%= notice %> </h2>
+  <div class="rant-box">
+    <div class="rant-head">
+      <% if current_user && current_user.id == rant.user_id %>
+        <%= link_to "Edit", edit_rant_path(rant), class: "body-button fa fa-edit" %>
+      <% end %>
+      <h2><%= rant.title %></h2><br>
+    </div>
+
+    <div class="avatar">
+
+    </div>
+
+    <div class ="rant-post">
+      <%= rant.body %>
+    </div>
+  </div>
+
+<% end %>
+  <% else %>
+
+  <div class ="rant-box">
+    <h2> These are not the droids you are looking for !! </h2>
+  </div>
+</div>
+
   <% end %>

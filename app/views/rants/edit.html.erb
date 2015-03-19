@@ -5,14 +5,19 @@
 <%= message %>
 <%  end %>
 <% end %>
+<div class="rant-box">
+ <%= form_for @rant do |f| %>
+  <div class="rant-head">
+    <h2><%= f.text_field :title, class: "wide" %></h2>
+    <%= link_to "Delete", rant_path(@rant), method: :delete, class: "delete-button fa fa-trash-o" %>
+    <%= link_to "Cancel", rants_path, class: "cancel-button fa fa-sign-in" %>
+    <%= f.submit "Save", class: "body-button fa fa-upload" %>
+  </div>
 
-<%= form_for @rant do |f| %>
 
- <%= f.label :title %>
- <%= f.text_field :title %>
-
- <%= f.label :body %>
- <%= f.text_field :body %>
- <%= link_to "Delete", rant_path(@rant), method: :delete, class: "btn btn-danger" %>
- <%= f.submit "Save" %>
+  <div class="rant-post">
+    <div class="avatar">
+    </div>
+      <%= f.text_area :body, class:"text-area" %>
+    </div>
  <% end %>
