@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/sign-in' => 'authentication#new', as: :signin
   post '/sign-in' => 'authentication#create'
   get '/search' => 'rants#index', as: :search
+  get '/sign-out' => 'authentication#destroy'
+
 
 
   resources :users

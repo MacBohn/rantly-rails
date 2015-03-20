@@ -149,7 +149,7 @@ body{
 .wide{
   float: left;
   max-width: 600px;
-  min-width: 200px;
+  min-width: 500px;
   display: inline;
   outline: none;
   border: none;
@@ -160,7 +160,6 @@ body{
 .wide:hover {
   transition: 0.25s;
   border-bottom: 2px solid $buttonGreen;
-/* you'll need javascript to keep border bottom styled after mousing away */
 }
 
 .scroll{
@@ -186,4 +185,8 @@ body{
 
 .inline{
   display: inline;
+}
+
+textarea{
+  height: 300px;
 }
