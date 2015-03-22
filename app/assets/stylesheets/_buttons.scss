@@ -1,6 +1,6 @@
 .new-button{
   background: white;
-  color: $buttonGreen;
+  color: #1ABC9C;
   padding: 6px 13px;
   margin-right: 15px;
   display: inline;
@@ -12,13 +12,13 @@
 }
 
 .new-button:hover{
-  background: $buttonGreen;
+  background: #1ABC9C;
   color: white;
   text-decoration: none;
 }
 
-.profile-button{
-  background: $buttonGreen;
+.log-button{
+  background: #1ABC9C;
   color: white;
   display: block;
   font-size: 16px;
@@ -36,10 +36,10 @@
   line-height: 1.8;
 }
 
-.profile-button:hover{
-  border: 1px solid $buttonGreen;
+.log-button:hover{
+  border: 1px solid #1ABC9C;
   background: white;
-  color: $buttonGreen;
+  color: #1ABC9C;
 }
 
 .body-button, .cancel-button, .delete-button{
@@ -62,43 +62,43 @@
 }
 
 .body-button{
-  background: $buttonGreen;
+  background: #1ABC9C;
   a{
     color: white;
   }
 }
 
 .cancel-button{
-  background: $cancelGrey;
+  background: #B3B3B3;
 }
 
 .delete-button{
-  background: $deleteYellow;
+  background: #EEBB00;
 }
 
 .body-button:hover{
-  border: 1px solid $buttonGreen;
+  border: 1px solid #1ABC9C;
   background: white;
-  color: $buttonGreen;
+  color: #1ABC9C;
   a{
-    color: $buttonGreen;
+    color: #1ABC9C;
   }
 }
 
 .cancel-button:hover{
-  border: 1px solid $cancelGrey;
+  border: 1px solid #B3B3B3;
   background: white;
-  color: $cancelGrey;
+  color: #B3B3B3;
   a{
-    color: $cancelGrey;
+    color: #B3B3B3;
   }
 }
 
 .delete-button:hover{
-  border: 1px solid $deleteYellow;
+  border: 1px solid #EEBB00;
   background: white;
-  color: $deleteYellow;
+  color: #EEBB00;
   a{
-    color: $deleteYellow;
+    color: #EEBB00;
   }
 }

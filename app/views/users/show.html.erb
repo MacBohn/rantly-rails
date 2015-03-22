@@ -1,7 +1,10 @@
-SHOW
+ <div class="avatar">
+ </div>
 <% @user.rants.each do |rant| %>
-<%= rant.title %>
-<%= rant.body %>
-<% end %>
-<div class="avatar">
+<div class="rant-head">
+  <%= rant.title %>
 </div>
+<div class ="rant-post">
+  <%= rant.body %>
+</div>
+<% end %>
