@@ -13,7 +13,7 @@ class RantsController < ApplicationController
       else
         redirect_to rants_path, notice: 'You must log in!'
       end
-    end  
+    end
 
   def create
     @rant = Rant.new(rant_params)
