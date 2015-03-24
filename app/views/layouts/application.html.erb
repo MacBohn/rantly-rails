@@ -66,13 +66,11 @@
     </div>
 
     <div class="container1">
-
-       <% if notice.is_a? String %>
-         <div class="text-center alert alert-info">
-           <%= notice %>
-         </div>
-       <% end %>
-
+      <% if notice.is_a? String %>
+        <div class="text-center alert alert-info">
+          <%= notice %>
+        </div>
+      <% end %>
          <span class="scroll"><%= yield %></span>
      </div>
    </div>

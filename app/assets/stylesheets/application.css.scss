@@ -193,4 +193,15 @@ body{
 
 textarea{
   height: 300px;
+  border: 2px solid #ECF0F1;
+  color: #34495E;
+  font-size: 18px
+}
+
+textarea:hover{
+  border: 2px solid #1ABC9C;
+}
+
+.message{
+  margin-left: auto;
 }
