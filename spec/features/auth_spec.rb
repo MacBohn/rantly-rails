@@ -24,11 +24,11 @@ feature "Users" do
           click_on "Sign Up"
           end
           expect(page).to have_content("Mac")
-          click_on "Sign Out"
+          click_on "Log Out"
           expect(page).to_not have_content("Mac")
           end
 
-          scenario "Users can sign in and sign out" do
+          scenario "Users can sign in and Log Out" do
             visit '/sign-up'
             fill_in "First name", with: "Mac"
             fill_in "Last name", with: "Bohn"
@@ -38,11 +38,11 @@ feature "Users" do
               click_on "Sign Up"
               end
               expect(page).to have_content("Mac")
-              click_on "Sign Out"
+              click_on "Log Out"
               expect(page).to_not have_content("Mac")
-              visit signin_path
-              fill_in "Email", with: "Mac@Bohn.com"
-              fill_in "Password", with: "password"
+              visit root_path
+              fill_in "Your email", with: "Mac@Bohn.com"
+              fill_in "Your password", with: "password"
               click_on "Log In"
               expect(page).to have_content("Mac")
               end

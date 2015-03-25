@@ -38,7 +38,7 @@ feature 'Rants' do
       expect(page).to have_content("This is the title")
       expect(page).to have_content("This is the body")
       click_on "Edit"
-      fill_in "Title", with: "This is the title that was edited"
+      fill_in "Title", with: 'This is the title that was edited'
       fill_in "Body", with: ("This is the body that was edited" * 9)
       click_on "Save"
       expect(page).to have_content("This is the title that was edited")
@@ -102,7 +102,7 @@ feature 'Rants' do
       expect(page).to have_content("This is the body")
         visit root_path
 
-        click_on "Sign Out"
+        click_on "Log Out"
 
         visit '/sign-up'
         fill_in "First name", with: "John"

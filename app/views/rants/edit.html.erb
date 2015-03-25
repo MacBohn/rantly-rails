@@ -8,6 +8,7 @@
 <div class="rant-box">
  <%= form_for @rant do |f| %>
   <div class="rant-head">
+    <%= f.label :title, class: "test" %>
     <h2><%= f.text_field :title, class: "wide" %></h2>
     <%= link_to "Delete", rant_path(@rant), method: :delete, class: "delete-button fa fa-trash-o" %>
     <%= link_to "Cancel", rants_path, class: "cancel-button fa fa-sign-in" %>
@@ -17,7 +18,10 @@
 
   <div class="rant-post">
     <div class="avatar">
+      <br><br><br><br><br><br>
+      <span class ="countdown"></span>
     </div>
-      <%= f.text_area :body, class:"text-area" %>
+      <%= f.label :body, class: "test" %>
+      <%= f.text_area :body, class:"message text-area" %>
     </div>
  <% end %>
