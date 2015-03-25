@@ -1,6 +1,10 @@
-<h1>Hello users</h1>
-
-<% @users.each do |user| %>
-<%= link_to user.full_name, user_path(user) %>
-<%= image_tag user.gravatar_url, class: " profile-pic avatar" %>
-<% end %>
+<div class="row">
+  <% @users.reverse_each do |user| %>
+    <div class="user-tile">
+      <div class="avatar", style="background-image: url('<%= user.gravatar_url  %>')">
+      </div>
+        <%= link_to user.full_name, user_path(user) %><br>
+        <span><%= user.email %></span>
+    </div>
+  <% end %>
+</div>

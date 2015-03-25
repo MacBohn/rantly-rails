@@ -77,6 +77,9 @@ body{
   border-radius: 20px;
   border-bottom-right-radius: 0;
   border: 5px dashed #34495E;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .test{
@@ -90,6 +93,8 @@ body{
   width: 20%;
   margin-right: 20px;
 }
+
+
 
 .rant-head{
   float: left;
