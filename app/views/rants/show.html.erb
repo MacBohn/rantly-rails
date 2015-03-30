@@ -1,2 +1,12 @@
-<h1><%= @rant.title %></h1>
-<h3> <%= @rant.body %></h3>
+<div class="scroll">
+  <% @user.rant.each do |rant| %>
+    <div class="rant-box">
+      <div class="rant-head">
+        <h1><%= rant.title %></h1>
+      </div>
+      <div class ="rant-post">
+        <%= rant.body %>
+      </div>
+    </div>
+</div>
+<% end %>
