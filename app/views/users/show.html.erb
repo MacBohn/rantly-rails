@@ -1,10 +1,19 @@
- <div class="avatar">
- </div>
-<% @user.rants.each do |rant| %>
-<div class="rant-head">
-  <%= rant.title %>
-</div>
-<div class ="rant-post">
-  <p><%= rant.body %></p>
-</div>
+<div class="scroll">
+<% @user.rants.reverse_each do |rant| %>
+  <div class="rant-box">
+    <div class="rant-head">
+      <% if current_user && current_user.id == rant.user_id %>
+        <%= link_to "Edit", edit_rant_path(rant), class: "body-button fa fa-edit" %>
+      <% end %>
+      <h2><%= rant.title %></h2><br>
+    </div>
+
+    <div class="avatar">
+    </div>
+
+    <div class ="rant-post">
+      <%= rant.body %>
+    </div>
+  </div>
+
 <% end %>
