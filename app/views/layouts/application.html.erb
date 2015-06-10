@@ -19,6 +19,8 @@
       <span><%= link_to "Styleguide", new_rant_path  %></span>
       <% if current_user %>
       <span class = "pull-right"><%= current_user.full_name %></span>
+      <% else %>
+      <span class = "pull-right"><%= link_to "Sign Up", signup_path, class: "new-button" %></span>
       <% end %>
       </div>
     </div>
