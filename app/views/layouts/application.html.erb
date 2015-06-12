@@ -12,7 +12,7 @@
 <body>
 
   <div class= "navbar">
-    <div class="container">
+    <div class="containerT">
       <%= link_to "Rantly", root_path  %>
       <span><%= link_to "Rants", root_path  %></span>
       <span><%= link_to "Users", users_path %></span>
@@ -20,7 +20,7 @@
       <% if current_user %>
       <span class = "pull-right"><%= current_user.full_name %></span>
       <% else %>
-      <span class = "pull-right"><%= link_to "Sign Up", signup_path, class: "new-button" %></span>
+      <span class = "pull-right"><%= link_to "Sign Up", signup_path, class: "sign-up" %></span>
       <% end %>
       </div>
     </div>
@@ -28,7 +28,7 @@
 
 
     <div class="header">
-      <div class="container">
+      <div class="containerS">
         <%= form_tag search_path, class:"search", :method => 'get' do %>
         <% if params[:search] == "" %>
         <%= text_field_tag :search, params[:search], placeholder: "This can't be blank !", class: "search" %>
