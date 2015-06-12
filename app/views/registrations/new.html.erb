@@ -1,29 +1,18 @@
-<h1>Sign up</h1>
-
-<%= form_for @user, url: signup_path, html: {class: 'form-horizontal'} do |f|  %>
-
-<div class = "form-group">
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name, class: "form-control" %>
-</div>
-
-<div class = "form-group">
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name, class: "form-control" %>
-</div>
-
-<div class = "form-group">
-  <%= f.label :email %>
-  <%= f.email_field :email, class: "form-control" %>
-</div>
-
-<div class = "form-group">
-  <%= f.label :password %>
-  <%= f.password_field :password, class: "form-control" %>
-  <br>
-</div>
-
-<div class = "form-group">
-  <%= f.submit "Sign Up", class: "btn btn-primary" %>
+<div class ="Sign-Up">
+  <h1>Sign up for Rantly !</h1>
+  <%= form_for @user, url: signup_path, html: {class: 'form-horizontal'} do |f|  %>
+   <div class = "alignment">
+    <div class = "form-group col-xs-6">
+    <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+      <br><br>
+    <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+      <br><br>
+    <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+      <br><br>
+    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+      <br><br>
+    <%= f.submit "Sign Up", class: "btn btn-primary" %>
   <% end %>
+    </div>
+   </div>
 </div>
