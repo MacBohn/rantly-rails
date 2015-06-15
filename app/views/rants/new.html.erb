@@ -7,7 +7,6 @@
   <%= form_for @rant do |f| %>
     <div class="rant-head">
       <h2>  <%= f.text_field :title, class: "wide", :placeholder => "Rant Title" %></h2>
-      <%= f.label :title, class: "test" %>
 
       <%= f.submit "Save", class:"body-button fa fa-upload" %>
       <%= link_to "Cancel", root_path, class:"cancel-button fa fa-sign-in" %>
@@ -18,7 +17,6 @@
    </div>
     <div class="rant-post">
       <div class="form-group">
-        <%= f.label :body, class: "test" %>
         <%= f.text_area :body, class: "message col-md-offset-1 col-md-8", :placeholder => "Start ranting" %>
       </div>
   <% end %>

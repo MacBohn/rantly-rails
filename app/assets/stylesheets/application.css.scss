@@ -49,8 +49,7 @@ body{
   min-width: 100px;
   float: left;
   height: 100%;
-  background: white;
-  border: 3px solid black;
+  background: #34495E;
 }
 
 
@@ -93,7 +92,7 @@ body{
   background: url("http://www.gravatar.com/avatar/undefined?s=450") center/cover no-repeat;
   border-radius: 20px;
   border-bottom-right-radius: 0;
-  border: 5px dashed #34495E;
+  border: 5px dashed white;
   display: block;
   width: 100%;
   margin-bottom: 15px;
@@ -118,21 +117,18 @@ body{
   float: left;
   width: 100%;
   padding-bottom: 20px;
+  color: white;
   a{
   text-decoration: none;
   }
 }
 
-.rant-head h2{
-  a{
-  color:#34495E;
-  }
-}
+
 
 .rant-post{
   width: 100%;
   padding-top: 150px;
-  clear: both;
+  color: white;
   display: inline;
 }
 
@@ -179,6 +175,7 @@ body{
   border-radius: 4px;
   box-shadow: -1px 1px 1px 1px rgba(225,225,225,0.6);
   overflow: hidden;
+  background: black;
 }
 
 .rant-box h2{
@@ -205,7 +202,7 @@ body{
 }
 
 .scroll{
-  background: 3px solid red;
+  background: #34495E;
   width: 100%;
   height: 100%;
   overflow: scroll;
