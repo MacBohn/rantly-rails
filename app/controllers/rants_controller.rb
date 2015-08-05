@@ -2,9 +2,6 @@ class RantsController < ApplicationController
 
   def index
     @rants = Rant.search(params[:search])
-    if @rants.count == 0
-      flash.now[:notice] = "These aren't the droids you're looking for !"
-    end
   end
 
     def new
